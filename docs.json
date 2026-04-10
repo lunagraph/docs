@@ -18,7 +18,8 @@
             "pages": [
               "index",
               "quickstart",
-              "install-claude-code"
+              "install-claude-code",
+              "install-chrome-extension"
             ]
           }
         ]
