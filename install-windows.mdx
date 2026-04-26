@@ -1,0 +1,50 @@
+---
+title: "Install Lunagraph for Windows"
+description: "Install the Lunagraph desktop app on Windows 10 or 11."
+"sidebar": {"hidden": true}
+---
+
+System requirements: Windows 10 or 11, 64-bit.
+
+## Install the app
+
+<Steps>
+<Step title="Open the installer">
+  Double-click the `Lunagraph-*-setup.exe` file you received.
+</Step>
+
+<Step title="Bypass the SmartScreen warning">
+  Windows may show a blue screen titled **"Windows protected your PC"**. This appears for any new app that doesn't yet have an established Microsoft SmartScreen reputation — Lunagraph is safe; we're in the process of getting our code signing certificate, after which this warning will go away.
+
+  - Click **More info** (small text under the warning message).
+  - Click **Run anyway**.
+</Step>
+
+<Step title="Follow the installer">
+  Lunagraph will install and add itself to your Start menu. A desktop shortcut is created automatically.
+</Step>
+
+<Step title="Launch Lunagraph">
+  Open Lunagraph from the Start menu or desktop shortcut, and sign in with your account.
+</Step>
+</Steps>
+
+## Updates
+
+Lunagraph checks for updates automatically each time you launch it. New versions install in the background and apply on next restart.
+
+## Troubleshooting
+
+<Steps>
+<Step title="Antivirus blocked the file">
+  Some antivirus tools flag unsigned installers by default. Add an exception for `Lunagraph-*-setup.exe` or temporarily allow the file.
+</Step>
+
+<Step title="SmartScreen has no Run anyway button">
+  This usually means your organization has tightened SmartScreen via group policy. Ask your IT admin to whitelist `Lunagraph.exe`, or email us at [support@lunagraph.com](mailto:support@lunagraph.com) and we'll help.
+</Step>
+
+<Step title="App won't open after install">
+  Reboot once and try again. If it still won't open, send us the contents of `%APPDATA%\Lunagraph\logs\` and we'll take a look.
+</Step>
+</Steps>
