@@ -21,6 +21,12 @@
               "install-claude-code",
               "install-chrome-extension"
             ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/getting-started"
+            ]
           }
         ]
       }
