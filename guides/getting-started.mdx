@@ -1,0 +1,80 @@
+---
+title: "Start here"
+description: "A tour of the Lunagraph canvas and a sneak peek at design-to-code workflows."
+---
+
+export const seek = (s) => (e) => {
+  const f = typeof document !== "undefined" && document.getElementById("lg-yt");
+  if (!f || !f.contentWindow) return;
+  e.preventDefault();
+  f.contentWindow.postMessage(`{"event":"command","func":"seekTo","args":[${s}, true]}`, "*");
+  f.contentWindow.postMessage(`{"event":"command","func":"playVideo","args":[]}`, "*");
+  f.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
+This guide walks you around Lunagraph: how to add things to the canvas, work with components, edit with AI, and a sneak peek of the design-to-code workflows we'll cover in upcoming guides.
+
+## Video walkthrough
+
+<iframe
+  id="lg-yt"
+  src="https://www.youtube.com/embed/C2dgn8hbPEQ?enablejsapi=1"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+  style={{ width: "100%", aspectRatio: "16/9", borderRadius: "0.5rem" }}
+/>
+
+## What you'll learn
+
+- <a href="https://youtu.be/C2dgn8hbPEQ?t=18" onClick={seek(18)}>**0:18**</a> How Lunagraph's canvas compares to Figma, and what makes it different
+- <a href="https://youtu.be/C2dgn8hbPEQ?t=36" onClick={seek(36)}>**0:36**</a> Adding HTML elements and components to the canvas
+- <a href="https://youtu.be/C2dgn8hbPEQ?t=86" onClick={seek(86)}>**1:26**</a> Creating your own components
+- <a href="https://youtu.be/C2dgn8hbPEQ?t=107" onClick={seek(107)}>**1:47**</a> Pasting code from the shadcn docs
+- <a href="https://youtu.be/C2dgn8hbPEQ?t=167" onClick={seek(167)}>**2:47**</a> Editing with the AI chat
+- <a href="https://youtu.be/C2dgn8hbPEQ?t=212" onClick={seek(212)}>**3:32**</a> A sneak peek at design-to-code workflows
+
+## A canvas made of code
+
+<a href="https://youtu.be/C2dgn8hbPEQ?t=18" onClick={seek(18)}>Watch from 0:18</a>
+
+Lunagraph is a design canvas, much like Figma. Paste in inspiration, take notes, and use granular controls to create from scratch. The difference: everything you put on the canvas is real HTML, CSS, and React.
+
+## Adding things to the canvas
+
+<a href="https://youtu.be/C2dgn8hbPEQ?t=36" onClick={seek(36)}>Watch from 0:36</a>
+
+Use the **Insert panel** on the left to add any HTML element (like a `div`) or a component. Lunagraph ships with shadcn components installed, and you can bring in your own custom components too. Components come with their props. For example, a shadcn `Button` exposes its `variant` so you can switch it to `outline` from the canvas.
+
+You can also create your own components (<a href="https://youtu.be/C2dgn8hbPEQ?t=86" onClick={seek(86)}>1:26</a>): right-click → **Create component**. It works like creating a component in Figma, except it actually produces a React component that's added to your assets. Edit a component once and changes propagate across your canvas.
+
+## Pasting in code
+
+<a href="https://youtu.be/C2dgn8hbPEQ?t=107" onClick={seek(107)}>Watch from 1:47</a>
+
+Because shadcn components are installed, you can copy example code straight from the [shadcn docs](https://ui.shadcn.com), click on the canvas, and paste. The pasted UI is fully editable. Wrap things in a div with auto layout (**Shift + A**, like Figma), tweak Tailwind variables in the styles panel, or drop into the class field to write CSS or Tailwind directly.
+
+## Editing with AI
+
+<a href="https://youtu.be/C2dgn8hbPEQ?t=167" onClick={seek(167)}>Watch from 2:47</a>
+
+The chat lives on the left. To talk to it about something on your canvas, select it and press **Cmd + L**. That adds the selection as a reference in the chat. Then type what you want and send. Generated UI uses your installed shadcn components and lands as regular canvas elements, so you can fix small things or mix and match across variations after the fact.
+
+<Note>
+  The chat is powered by Claude Code, which needs to be installed in your terminal. If you haven't set it up yet, follow the [Install Claude Code](/install-claude-code) guide first.
+</Note>
+
+## Sneak peek: design-to-code workflows
+
+<a href="https://youtu.be/C2dgn8hbPEQ?t=212" onClick={seek(212)}>Watch from 3:32</a>
+
+Upcoming guides go deeper, but here's what's possible:
+
+- <a href="https://youtu.be/C2dgn8hbPEQ?t=219" onClick={seek(219)}>**Designing**</a> (3:39). Set up defaults (inputs, styles), duplicate one as a starting point, then select it, hit **Cmd + L** to reference it in the chat, and ask for the variation you want. The result matches your existing components and styles.
+- <a href="https://youtu.be/C2dgn8hbPEQ?t=263" onClick={seek(263)}>**Implementing**</a> (4:23). Give the chat access to your local folder. Select a screen, **Cmd + L** to reference it, and ask the chat to implement it in your codebase. Run your dev server and insert a **Live Preview** to see changes, including across viewports like mobile. The preview is interactive (scroll, click, etc.).
+- <a href="https://youtu.be/C2dgn8hbPEQ?t=301" onClick={seek(301)}>**Round-trip editing**</a> (5:01). Click **Edit** on a live preview to get an editable version of the rendered screen. Make changes by hand, see them tracked on the right, and **Save to code** to write them back to the right files in your codebase.
+- <a href="https://youtu.be/C2dgn8hbPEQ?t=322" onClick={seek(322)}>**Beyond UI**</a> (5:22). Animate elements on the canvas (hover states, transitions), build website graphics out of divs, or generate React components with props (like a dither shader) and tweak them live from the canvas.
+
+## Next
+
+More guides coming soon: designing, implementing, and round-trip editing each get their own deep dive.
