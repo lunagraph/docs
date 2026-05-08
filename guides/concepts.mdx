@@ -1,0 +1,75 @@
+---
+title: "Concepts"
+description: "How Lunagraph fits into your design workflow, and how design and code stay in sync."
+---
+
+export const seek = (s) => (e) => {
+  const f = typeof document !== "undefined" && document.getElementById("lg-yt-concepts");
+  if (!f || !f.contentWindow) return;
+  e.preventDefault();
+  f.contentWindow.postMessage(`{"event":"command","func":"seekTo","args":[${s}, true]}`, "*");
+  f.contentWindow.postMessage(`{"event":"command","func":"playVideo","args":[]}`, "*");
+  f.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
+Today, designers jump between Figma, Claude Code, the terminal, Cursor or another IDE, and the browser. Lunagraph aims to be the new home for designers: a place to design, experiment, and implement, without leaving the canvas.
+
+This guide explains how that works in practice, and how design and code stay in sync.
+
+## Video walkthrough
+
+<iframe
+  id="lg-yt-concepts"
+  src="https://www.youtube.com/embed/GEs3Hpp8XR0?enablejsapi=1"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+  style={{ width: "100%", aspectRatio: "16/9", borderRadius: "0.5rem" }}
+/>
+
+## What you'll learn
+
+- <a href="https://youtu.be/GEs3Hpp8XR0?t=43" onClick={seek(43)}>**0:43**</a> Why design is code, but not your codebase
+- <a href="https://youtu.be/GEs3Hpp8XR0?t=70" onClick={seek(70)}>**1:10**</a> Design is the future truth, codebase is the current truth
+- <a href="https://youtu.be/GEs3Hpp8XR0?t=127" onClick={seek(127)}>**2:07**</a> Three ways design and code stay in sync
+
+## Design is code, but not your codebase
+
+<a href="https://youtu.be/GEs3Hpp8XR0?t=43" onClick={seek(43)}>Watch from 0:43</a>
+
+Everything you design in Lunagraph is real code: real HTML, CSS, React, with states and properties. But it's not your codebase.
+
+Your codebase is what's shipped and deployed. Design is what's next. It's the intention, the draft, and the experiment. You need a canvas where you can explore, go wild, try a few things, then narrow down, get feedback, and decide what to implement.
+
+So in Lunagraph, your design is a copy of your codebase. Design is the future truth, and your codebase is the current truth. There will always be a bit of drift, and that's the point. When you're ready to commit a change (a rebrand, a redesign, a new feature), you implement it back into your codebase.
+
+## Three steps to keep things in sync
+
+<a href="https://youtu.be/GEs3Hpp8XR0?t=127" onClick={seek(127)}>Watch from 2:07</a>
+
+### 1. Pull your design system from your codebase
+
+<a href="https://youtu.be/GEs3Hpp8XR0?t=131" onClick={seek(131)}>Watch from 2:11</a>
+
+When you create a new Lunagraph project, you can start with what you already have in code. Import your components, design tokens, and styles directly from your codebase into the design canvas, so you're designing with the real building blocks from day one.
+
+### 2. Implement designs back to your codebase
+
+<a href="https://youtu.be/GEs3Hpp8XR0?t=154" onClick={seek(154)}>Watch from 2:34</a>
+
+Once you've designed a few new screens on the canvas, you can implement them to code without leaving Lunagraph:
+
+1. Locally, check out a branch in your codebase.
+2. Open the design page in Lunagraph (e.g. an onboarding flow).
+3. Select the screen, press **Cmd + L** to reference it in the chat, and ask the chat to implement it in your codebase. Claude Code starts coding in your local files.
+4. Click **Insert live preview** to see your localhost rendered on the canvas. If you spot small tweaks, do a **Live edit** directly on the preview and **Save to code** to write the changes back.
+
+### 3. Review code changes coming back into design
+
+<a href="https://youtu.be/GEs3Hpp8XR0?t=203" onClick={seek(203)}>Watch from 3:23</a>
+
+When the codebase changes (a developer ships a feature, someone accidentally tweaks a button), you can review those updates and approve them before they land in Lunagraph. If a change is unwanted, you can fix it in the codebase without polluting your design intent.
+
+## Next
+
+Once this clicks, jump into [Start here](/guides/getting-started) for a tour of the canvas itself, or follow the [Quickstart](/quickstart) to set up Lunagraph.

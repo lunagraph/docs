@@ -25,6 +25,7 @@
           {
             "group": "Guides",
             "pages": [
+              "guides/concepts",
               "guides/getting-started"
             ]
           }
