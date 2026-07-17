@@ -43,12 +43,7 @@
         "label": "Website",
         "href": "https://lunagraph.com"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Download",
-      "href": "https://lunagraph.com"
-    }
+    ]
   },
   "footer": {
     "socials": {
