@@ -1,0 +1,79 @@
+---
+title: "Edit a component"
+description: "Make visual changes to a shared React component, then save them to every instance."
+---
+
+### On this page
+
+- [Overview](#overview)
+- [Video walkthrough](#video-walkthrough)
+- [Before you edit: component or instance?](#before-you-edit-component-or-instance)
+- [What is a component?](#what-is-a-component)
+- [Edit a component](#edit-a-component)
+- [Discard your edit](#discard-your-edit)
+
+## Overview
+
+**Edit Component opens a React component as editable canvas layers.** Change its layout, styling, text, or structure visually, then save those changes back to the component's `.tsx` file. Every instance that uses the component updates with your changes.
+
+## Video walkthrough
+
+<video
+  controls
+  preload="metadata"
+  playsInline
+  src="/videos/edit-component-1.mp4"
+  aria-label="Edit component walkthrough, part one"
+  style={{ width: "100%", borderRadius: "0.5rem" }}
+/>
+
+<video
+  controls
+  preload="metadata"
+  playsInline
+  src="/videos/edit-component-2.mp4"
+  aria-label="Edit component walkthrough, part two"
+  style={{ width: "100%", borderRadius: "0.5rem" }}
+/>
+
+## Before you edit: component or instance?
+
+Use **Edit component** when you want to update the shared component. If you only want to change one instance, adjust its props in the properties panel instead.
+
+| Action | What it affects |
+| --- | --- |
+| Change a prop in the properties panel | Only the selected instance |
+| Choose **Edit component**, make changes, and save | The shared component and every instance |
+| Discard your component edit | Nothing; the shared component stays as it was |
+
+## What is a component?
+
+A component in Lunagraph is a real React component, like one a developer writes in code. It is not just a shape or a group of layers. It is part of your codebase and runs live on the canvas.
+
+A component can be:
+
+- **Shared:** A component such as `Button.tsx` that appears in many places. Update the component and every instance picks up the change.
+- **Interactive:** A component with real clicks, hover effects, and states.
+- **A prototype:** A complete flow you can click through.
+
+If you have used Figma components, the model will feel familiar. The difference is that a Figma component lives in Figma's format, while a Lunagraph component is a React component in a `.tsx` file.
+
+## Edit a component
+
+1. **Right-click the component.** Select a component on the canvas, then right-click it.
+
+2. **Choose Edit component.** Lunagraph opens the component as editable canvas layers.
+
+3. **Make your changes.** Adjust styles, text, spacing, layout, or structure just as you would on any other layer. You can also use the AI chat, which is already focused on the component, and describe the change you want.
+
+4. **Save your work.** Choose **Save** to write the visual edits back to the shared component. Every instance that renders that component will receive the update.
+
+### Save with instructions
+
+Choose **Save with instructions** when the change needs extra logic that cannot be expressed by the visual edit alone. Describe how the change should behave, and the AI will apply it to the component.
+
+For example, after adding an element visually, you could write: "Add this to every bubble, but show it only on hover."
+
+## Discard your edit
+
+Choose **Discard** to leave edit mode without changing the shared component. Lunagraph removes the edits you made during the session and keeps the component as it was.

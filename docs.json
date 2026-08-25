@@ -25,6 +25,11 @@
           {
             "group": "Guides",
             "pages": [
+              "guides/edit-component",
+              "guides/custom-controls",
+              "guides/send-a-prototype-link",
+              "guides/chrome-extension-snapshot",
+              "guides/bring-in-your-codebase",
               "guides/concepts",
               "guides/getting-started"
             ]

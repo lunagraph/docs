@@ -1,0 +1,75 @@
+---
+title: "Custom controls"
+description: "Tune component behavior with controls on the canvas."
+---
+
+Tune real behavior on the canvas. Build the controls your component needs instead of digging through code.
+
+### On this page
+
+- [Overview](#overview)
+- [What are props?](#what-are-props)
+- [Video walkthrough](#video-walkthrough)
+- [Adjust a control](#adjust-a-control)
+- [Ask the AI to expose a prop](#ask-the-ai-to-expose-a-prop)
+
+## Overview
+
+Components expose their props as controls, so you can tune blur, glow, delay, position, timing, and other values on the canvas. Every prop appears as a control automatically.
+
+If a value is missing, the component does not expose it as a prop yet. Ask the AI to add the prop. Once the control appears, you can tune the result by feel.
+
+## What are props?
+
+A prop is a value that a component exposes for customization, such as a button's color or size or a shader's glow, blur, or delay. A custom control puts that prop on the canvas as a slider, toggle, or numeric input.
+
+## Video walkthrough
+
+<video
+  controls
+  preload="metadata"
+  playsInline
+  src="/videos/custom-controls-1.mp4"
+  aria-label="Custom controls walkthrough, part one"
+  style={{ width: "100%", borderRadius: "0.5rem" }}
+/>
+
+<video
+  controls
+  preload="metadata"
+  playsInline
+  src="/videos/custom-controls-2.mp4"
+  aria-label="Custom controls walkthrough, part two"
+  style={{ width: "100%", borderRadius: "0.5rem" }}
+/>
+
+<video
+  controls
+  preload="metadata"
+  playsInline
+  src="/videos/custom-controls-3.mp4"
+  aria-label="Custom controls walkthrough, part three"
+  style={{ width: "100%", borderRadius: "0.5rem" }}
+/>
+
+## Adjust a control
+
+1. **Select the component.** Select a component that already exposes props. Its controls appear in the properties panel.
+
+2. **Adjust the values.** Change the blur, delay, position, or any other value the component exposes. The canvas updates as you work.
+
+## Ask the AI to expose a prop
+
+If a value does not appear in the properties panel, ask the AI to expose it as a prop. You can create controls for:
+
+- **Motion:** Pause, play, scrub, or delay an animation.
+- **Shader values:** Tune glow, blur, bleed, or noise.
+- **Transitions:** Change easing, duration, or timing.
+- **Toggles:** Show or hide part of a component, or switch between states.
+- **Position and size:** Move, resize, or rotate an element.
+
+You do not need to describe the implementation. A request such as "Expose distortion as a prop" is enough. Ask the AI to use whole numbers instead of decimals for now.
+
+1. **Describe what you want.** Tell the AI what you want to adjust, such as "Add a control for how long the card pauses on hover."
+
+2. **Refine the result.** Once the control appears, adjust it until the component feels right.

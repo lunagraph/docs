@@ -1,0 +1,42 @@
+---
+title: "Capture a webpage with the Chrome extension"
+description: "Bring a live webpage into Lunagraph as editable elements."
+---
+
+Capture a live webpage and bring it into Lunagraph as real, editable elements instead of a flat image.
+
+### On this page
+
+- [Overview](#overview)
+- [Video walkthrough](#video-walkthrough)
+- [Capture and paste a webpage](#capture-and-paste-a-webpage)
+
+## Overview
+
+Use the Lunagraph Chrome extension when you want to redesign a page that already exists in your product or elsewhere on the web. Capture the page, then paste it onto the canvas as editable elements.
+
+The result depends on the page you capture:
+
+- **Your site or localhost:** Turn on component capture. Lunagraph preserves recognized components, so a captured button remains a real Button component. You can restyle it, change its variant, or reuse it in another design.
+- **Another website:** Lunagraph cannot access the site's component code, so it captures editable DOM elements. You get an accurate visual copy that you can use as a starting point.
+
+This workflow works best when you redesign your own product. Run it on localhost, capture the page, and continue designing with the components you already use.
+
+## Video walkthrough
+
+<video
+  controls
+  preload="metadata"
+  playsInline
+  src="/videos/chrome-extension-snapshot.mp4"
+  aria-label="Chrome extension snapshot walkthrough"
+  style={{ width: "100%", borderRadius: "0.5rem" }}
+/>
+
+## Capture and paste a webpage
+
+1. **Choose whether to capture components.** Turn on **Capture components** when you capture your own site or localhost. Leave it off when you capture another website.
+
+2. **Capture the page.** Open the page that you want to bring into Lunagraph, then click **Capture screen** in the Chrome extension.
+
+3. **Paste into Lunagraph.** Paste the capture onto the canvas. When Lunagraph recognizes your components, you can edit their real props immediately. For example, you can change a captured Button from its default variant to destructive or secondary.
