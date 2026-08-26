@@ -1,0 +1,175 @@
+---
+title: "Getting started tutorial"
+description: "Follow a complete walkthrough of Lunagraph, from the canvas to round-trip editing."
+---
+
+export const seek = (seconds) => (event) => {
+  const frame = typeof document !== "undefined" && document.getElementById("lg-yt-tutorial");
+  if (!frame || !frame.contentWindow) return;
+  event.preventDefault();
+  frame.contentWindow.postMessage(`{"event":"command","func":"seekTo","args":[${seconds}, true]}`, "*");
+  frame.contentWindow.postMessage(`{"event":"command","func":"playVideo","args":[]}`, "*");
+  frame.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
+Watch this tutorial for a complete tour of Lunagraph, then use the chapter links to revisit any part of the workflow.
+
+<iframe
+  id="lg-yt-tutorial"
+  src="https://www.youtube.com/embed/FTLtv0HcTCA?enablejsapi=1"
+  title="Lunagraph getting started tutorial"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen
+  style={{ width: "100%", aspectRatio: "16/9", borderRadius: "0.5rem" }}
+/>
+
+## Tutorial chapters
+
+- <a href="https://youtu.be/FTLtv0HcTCA?t=0" onClick={seek(0)}>**0:00**</a> Introduction
+- <a href="https://youtu.be/FTLtv0HcTCA?t=17" onClick={seek(17)}>**0:17**</a> The canvas: frames are divs and everything is React
+- <a href="https://youtu.be/FTLtv0HcTCA?t=80" onClick={seek(80)}>**1:20**</a> Variables map to your Tailwind configuration
+- <a href="https://youtu.be/FTLtv0HcTCA?t=124" onClick={seek(124)}>**2:04**</a> Edit CSS and classes in the code tab
+- <a href="https://youtu.be/FTLtv0HcTCA?t=154" onClick={seek(154)}>**2:34**</a> Import a design system or full repository
+- <a href="https://youtu.be/FTLtv0HcTCA?t=233" onClick={seek(233)}>**3:53**</a> Use components and props on the canvas
+- <a href="https://youtu.be/FTLtv0HcTCA?t=291" onClick={seek(291)}>**4:51**</a> Compose screens with familiar shortcuts
+- <a href="https://youtu.be/FTLtv0HcTCA?t=339" onClick={seek(339)}>**5:39**</a> Design with AI and Claude Code
+- <a href="https://youtu.be/FTLtv0HcTCA?t=445" onClick={seek(445)}>**7:25**</a> Pull real screens from your codebase
+- <a href="https://youtu.be/FTLtv0HcTCA?t=491" onClick={seek(491)}>**8:11**</a> Capture live UI with the Chrome extension
+- <a href="https://youtu.be/FTLtv0HcTCA?t=541" onClick={seek(541)}>**9:01**</a> Build components developers can use
+- <a href="https://youtu.be/FTLtv0HcTCA?t=666" onClick={seek(666)}>**11:06**</a> Tune creative components with custom controls
+- <a href="https://youtu.be/FTLtv0HcTCA?t=735" onClick={seek(735)}>**12:15**</a> Edit a component and save it back
+- <a href="https://youtu.be/FTLtv0HcTCA?t=822" onClick={seek(822)}>**13:42**</a> Build and share clickable prototypes
+- <a href="https://youtu.be/FTLtv0HcTCA?t=880" onClick={seek(880)}>**14:40**</a> Use MCP, GitHub, and developer handoff
+- <a href="https://youtu.be/FTLtv0HcTCA?t=948" onClick={seek(948)}>**15:48**</a> Preview localhost on the canvas
+- <a href="https://youtu.be/FTLtv0HcTCA?t=998" onClick={seek(998)}>**16:38**</a> Wrap up
+
+## Introduction
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=0" onClick={seek(0)}>Watch from 0:00</a>
+
+This walkthrough shows how Lunagraph fits into your design and development workflow. You will move from basic canvas editing to codebase imports, AI-assisted design, prototypes, and implementation.
+
+## The canvas is made of React
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=17" onClick={seek(17)}>Watch from 0:17</a>
+
+The canvas works like a familiar visual design tool. You can add frames, text, and other layers. The difference is that every layer is real code: a frame is a `div`, and changes on the canvas update its React and CSS directly.
+
+You do not export or translate the design into React later. You are editing the implementation while you design.
+
+## Variables map to Tailwind
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=80" onClick={seek(80)}>Watch from 1:20</a>
+
+Lunagraph variables come from your CSS classes and Tailwind configuration. When you apply a variable such as a background color, Lunagraph adds the corresponding class to the element.
+
+This keeps the canvas aligned with the tokens and utilities you already use in code.
+
+## Edit code directly
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=124" onClick={seek(124)}>Watch from 2:04</a>
+
+Switch to the code tab when you want more control. You can edit CSS, add classes, and use autocomplete without leaving the canvas.
+
+## Import from your codebase
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=154" onClick={seek(154)}>Watch from 2:34</a>
+
+When you create a project, start blank, use a starter design system, or import from your codebase. You can choose between two import scopes:
+
+- **Design system only:** Import UI components, CSS, tokens, and Tailwind configuration. Use this for a larger application or monorepo when you only need its visual building blocks.
+- **Full repository:** Connect the entire codebase. Use this for UI libraries or projects where you want to work with every file and push changes back to GitHub.
+
+Learn more in [Bring in your codebase](/guides/bring-in-your-codebase).
+
+## Use components and props
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=233" onClick={seek(233)}>Watch from 3:53</a>
+
+Imported components appear in the Assets panel and on the canvas. Select a component to edit the props it exposes, such as a Button's `variant`.
+
+Props play a role similar to component properties and variants in Figma, but they come directly from the React component's interface.
+
+## Compose screens with familiar shortcuts
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=291" onClick={seek(291)}>Watch from 4:51</a>
+
+Use your components to compose complete screens. Familiar shortcuts work here too. For example, select multiple layers and press **Shift + A** to wrap them in a flex container, then adjust its direction and spacing.
+
+## Design with AI
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=339" onClick={seek(339)}>Watch from 5:39</a>
+
+Install Claude Code in your terminal to use the chat panel with your own subscription. Press **Cmd + L** to reference a canvas element, then describe the change you want.
+
+The AI can read and edit canvas elements and inspect its work with screenshots. The result stays editable, so you can refine it manually or ask for several variations and combine the parts you like.
+
+## Pull real screens from your codebase
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=445" onClick={seek(445)}>Watch from 7:25</a>
+
+Connect local codebases to the chat, then ask the AI to bring existing UI onto the canvas. This helps you compare real product patterns, find inconsistencies, and reuse existing work while you design.
+
+## Capture live UI with the Chrome extension
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=491" onClick={seek(491)}>Watch from 8:11</a>
+
+Use the Chrome extension to capture an existing page and paste it onto the canvas. Turn on **Capture components** when you capture your own product. Lunagraph can then preserve recognized components and their props instead of flattening them into plain elements.
+
+Learn more in [Capture a webpage with the Chrome extension](/guides/chrome-extension-snapshot).
+
+## Build components developers can use
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=541" onClick={seek(541)}>Watch from 9:01</a>
+
+Design components around the data structure your product needs. Ask developers for the expected TypeScript props, then use the chat to turn your design into a component that supports every required state.
+
+You can test those states through the properties panel while developers receive a component with the interface they need.
+
+## Tune components with custom controls
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=666" onClick={seek(666)}>Watch from 11:06</a>
+
+Expose props for creative values such as blur, noise, bleed, animation timing, and particle effects. Lunagraph turns those props into controls that you can tune visually.
+
+Learn more in [Custom controls](/guides/custom-controls).
+
+## Edit a component and save it back
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=735" onClick={seek(735)}>Watch from 12:15</a>
+
+Right-click a component and choose **Edit component** to open its internal layers. Change its styling or structure, paste other elements inside it, then choose **Save** to update the component.
+
+Use **Save with instructions** when the change needs additional logic or context from the AI. Learn more in [Edit a component](/guides/edit-component).
+
+## Build and share clickable prototypes
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=822" onClick={seek(822)}>Watch from 13:42</a>
+
+Ask the chat to connect your screens into an interactive prototype. Because the prototype uses real components, people can click, type, and interact with it in a browser.
+
+Create a share link when you are ready for feedback. Learn more in [Send a prototype link](/guides/send-a-prototype-link).
+
+## Use MCP, GitHub, and developer handoff
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=880" onClick={seek(880)}>Watch from 14:40</a>
+
+Use Lunagraph's MCP with coding agents outside the built-in chat. You can also connect GitHub to pull and push repository changes.
+
+Developers can open a shared design, select an element, and copy its code. They can also ask a connected coding agent to retrieve a specific page or component from a Lunagraph project.
+
+## Preview localhost on the canvas
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=948" onClick={seek(948)}>Watch from 15:48</a>
+
+Insert a live preview of your local application onto the canvas. Compare several viewports at once and interact with the page while you implement the design.
+
+This completes the round-trip editing workflow: design with code, implement in your codebase, and review the live result on the canvas.
+
+## Wrap up
+
+<a href="https://youtu.be/FTLtv0HcTCA?t=998" onClick={seek(998)}>Watch from 16:38</a>
+
+You are ready to combine the canvas, your design system, AI assistance, prototypes, and live implementation in one workflow.

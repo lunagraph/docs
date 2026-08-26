@@ -18,6 +18,7 @@
             "pages": [
               "index",
               "quickstart",
+              "tutorial",
               "install-claude-code",
               "install-chrome-extension"
             ]
