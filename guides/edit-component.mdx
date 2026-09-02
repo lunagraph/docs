@@ -3,6 +3,8 @@ title: "Edit a component"
 description: "Make visual changes to a shared React component, then save them to every instance."
 ---
 
+Edit any component right on the canvas.
+
 ### On this page
 
 - [Overview](#overview)
@@ -14,7 +16,9 @@ description: "Make visual changes to a shared React component, then save them to
 
 ## Overview
 
-**Edit Component opens a React component as editable canvas layers.** Change its layout, styling, text, or structure visually, then save those changes back to the component's `.tsx` file. Every instance that uses the component updates with your changes.
+In Lunagraph, every layer on the canvas is editable. Components work a bit differently. They're pieces you build once and reuse across your canvas, like a Button that appears in several places. 
+
+Changing an element on the panel, like a color or size, only affects that one copy. But with a component, you can right-click to edit it directly, and once you save, it updates everywhere the component is used.
 
 ## Video walkthrough
 
@@ -48,23 +52,23 @@ Use **Edit component** when you want to update the shared component. If you only
 
 ## What is a component?
 
-A component in Lunagraph is a real React component, like one a developer writes in code. It is not just a shape or a group of layers. It is part of your codebase and runs live on the canvas.
+A component in Lunagraph is a real React component, the same kind a developer writes in code, running live on the canvas.
 
 A component can be:
 
-- **Shared:** A component such as `Button.tsx` that appears in many places. Update the component and every instance picks up the change.
-- **Interactive:** A component with real clicks, hover effects, and states.
-- **A prototype:** A complete flow you can click through.
+- **Shared**, like `Button.tsx`, used in multiple places on your canvas. 
+- **Interactive**, reacting to clicks and hovers, not just sitting static.
+- **A prototype**, something you can click through like the real thing.
 
-If you have used Figma components, the model will feel familiar. The difference is that a Figma component lives in Figma's format, while a Lunagraph component is a React component in a `.tsx` file.
+If you've used Figma, this is similar to Figma's components. The difference is where they live: a Figma component sits in Figma's own format, while a Lunagraph component is a real React component in a `.tsx` file.
 
 ## Edit a component
 
 1. **Right-click the component.** Select a component on the canvas, then right-click it.
 
-2. **Choose Edit component.** Lunagraph opens the component as editable canvas layers.
+2. **Choose Edit component.** The component becomes editable, so you can work with its styling, layout, and structure directly.
 
-3. **Make your changes.** Adjust styles, text, spacing, layout, or structure just as you would on any other layer. You can also use the AI chat, which is already focused on the component, and describe the change you want.
+3. **Make your changes.** Edit it like any other layer: styles, text, spacing, structure. Or use the AI chat, which is already focused on this component, if you'd rather describe the change than make it by hand.
 
 4. **Save your work.** Choose **Save** to write the visual edits back to the shared component. Every instance that renders that component will receive the update.
 
