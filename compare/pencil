@@ -1,0 +1,48 @@
+---
+title: "Lunagraph vs Pencil"
+description: "Design manually, through code, or with your own AI assistant, elements are live as code the whole time, no prompt required."
+---
+
+Design manually, through code, or with your own AI assistant, elements are live as code the whole time, no prompt required
+
+### On this page
+
+- [Overview](#overview)
+- [Key differences](#key-differences)
+    - [Editing model](#editing-model)
+    - [Environment](#environment)
+    - [Who it's for](#who-its-for)
+
+## Overview
+
+Lunagraph is a design canvas built on real React. Every element you edit is already code. Changes are live on the canvas, no prompt needed. Right-click a component to go further: edit its code, its settings, or chat with your own AI assistant right inside the canvas, then save straight back to your connected repo. It's built for design engineers who want full control across design, code, and AI in one place.
+
+Pencil is available as an extension inside VS Code or Cursor, or as a standalone desktop app on Mac, Linux, and Windows. Design files '.pen' are stored locally, right alongside your code in Git. Its manual toolset feels a lot like Figma, layers panel, CSS properties, drag-and-drop shapes, the same hotkeys and snapping, and it even has its own component system: edit a main component, and every instance updates automatically, much like Lunagraph's own. But turning any edit, manual or otherwise, into real application code always goes through an external AI assistant, like Claude Code, Cursor, or Codex, connected via MCP, there's no way to generate code without one. Pencil is built for developers who want their design tool close to their code. Lunagraph is a canvas where manual edits are code from the start, no prompt required, though you can still ask AI to help whenever you want.
+
+## Key differences
+
+### Editing model
+
+**Lunagraph:**
+Elements are live code on the canvas, no prompt needed. Components save back to your repo when connected.
+
+**Pencil:**
+Manual editing feels like Figma, and it has its own reusable components too, but turning any edit into real code always requires an external AI assistant connected via MCP.
+
+
+### Environment
+
+**Lunagraph:**
+Design in the canvas, no local CLI setup required to get started.
+
+**Pencil:**
+An extension inside VS Code or Cursor, or a standalone desktop app on Mac, Linux, and Windows. AI features always require an external assistant, like Claude Code, Cursor, or Codex, connected via MCP.
+
+
+### Who it’s for
+
+**Lunagraph:**
+Design engineers who want full control across design, code, and AI.
+
+**Pencil:**
+Developers who want a Figma-like design canvas, with real components, close to their code.
