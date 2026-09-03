@@ -1,0 +1,48 @@
+---
+title: "Lunagraph vs Wonder"
+description: "Design with AI or by hand, both in the same place."
+---
+
+Design with AI or by hand, both in the same place.
+
+### On this page
+
+- [Overview](#overview)
+- [Key differences](#key-differences)
+    - [Editing model](#editing-model)
+    - [Who it's for](#who-its-for)
+    - [What's included](#whats-included)
+
+## Overview
+
+Lunagraph is a design canvas built on real React. Every element is code from the start, and components are reusable: build one, use it everywhere, edit the shared version and every copy updates. Right-click a component to go further, editing its code, its settings, or chatting with your own AI assistant right inside the canvas. It's built for design engineers who want full control across design, code, and AI together.
+
+Wonder is a newer AI-first design canvas, currently in public alpha. You can describe what you want and its AI agent builds it, or use a full manual toolkit, frames, text, shaders, alignment, flex layout, the same way you would in any design tool. Since everything is real HTML and CSS rather than freeform vectors, there's no arbitrary shape tool. To bring in a custom shape, you copy it in from Figma. The code itself is real. Copy it out, or connect your own codebase over MCP. Wonder connects to coding agents like Cursor and Claude Code the same way, reading your existing codebase before generating. Where Lunagraph's components are reusable by design, Wonder's designs don't appear to have that same shared-source model, each element stays its own thing.
+
+## Key differences
+
+### Editing model
+
+**Lunagraph:**
+Every element is code from the start. Edit manually, through code, or with your own AI assistant, all in the same place. Components are reusable, edit them and every copy gets updated.
+
+**Wonder:**
+Create and edit elements manually with a full toolkit, frames, shapes, text, layers, or describe what you want and let the AI build it. Both live on the same canvas.
+
+
+### Who it's for
+
+**Lunagraph:**
+Design engineers who want full control across design, code, and AI, natively.
+
+**Wonder:**
+Teams who want to move fast from a prompt, with a lighter, more casual feel than a technical design tool.
+
+
+### What's included
+
+**Lunagraph:**
+A full code editor, terminal, and GitHub integration, built into the canvas.
+
+**Wonder:**
+AI generation, image generation, shader effects, and MCP connections to your coding agent of choice.
