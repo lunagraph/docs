@@ -3,7 +3,11 @@ title: "Bring in your codebase"
 description: "Connect a repository or import the design system you need."
 ---
 
-Start with the product you already have. Connect your repository or bring in only the design system you need.
+Start with the product you already have. Connect your repository or local files, or bring in just the design system you need.
+
+<Note>
+  This feature isn't available by default when creating a new project yet. To get access, reach out to [putri@lunagraph.com].
+</Note>
 
 ### On this page
 
@@ -14,14 +18,14 @@ Start with the product you already have. Connect your repository or bring in onl
 
 ## Overview
 
-You do not need to rebuild your components, tokens, or Tailwind configuration before you start designing. Connect your GitHub repository to design with your actual components, styles, and configuration.
+You don't need to rebuild your components, tokens, or Tailwind configuration before you start designing. Connect your GitHub repository or local files to design with your actual components, styles, and configuration.
 
 ## Choose what to connect
 
-Whether you connect a GitHub repository or local files, you can choose the scope:
+Whether you connect a GitHub repository or local files, you choose the scope:
 
-- **Full repository:** Use this option when your work depends on the app's structure, routes, or a large set of components.
-- **Design system only:** Import your components, tokens, theme, and Tailwind configuration. This option is lighter and faster when you only need the visual system.
+- **Connect the entire codebase:** Pulls all the code from your repo and keeps it in sync, with full access to every file and page. Best for UI libraries. Only some projects work here, since it needs Tailwind v4 and React.
+- **Import design system only:** The AI reads your components and adapts them into Lunagraph. Best for monorepos or full production apps. It pushes to a separate design repo and stays in sync with your codebase.
 
 ## Video walkthrough
 
@@ -36,10 +40,10 @@ Whether you connect a GitHub repository or local files, you can choose the scope
 
 ## Connect your codebase
 
-1. **Choose what to connect.** Pick a repository or local files, then decide whether you need the full app or only the design system.
+1. **Choose what to connect.** Pick your repository or local files, and decide whether you need the full app or just the design system.
 
 2. **Connect the codebase.** Link your GitHub repository or add your local files.
 
-3. **Start with one component.** Render a small, familiar component first. Confirm that its styles, tokens, and dependencies work before you build on top of it.
+3. **Start with one component.** The AI pulls in your components and lays them out for you. From there, you can start designing with the real thing.
 
 4. **Compose on the canvas.** Use your real components and design system to build your design.
