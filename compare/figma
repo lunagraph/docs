@@ -1,0 +1,48 @@
+---
+title: "Lunagraph vs Figma"
+description: "A canvas that's real code, not a design file with a code handoff."
+---
+
+A canvas that's real code, not a design file with a code handoff.
+
+### On this page
+
+- [Overview](#overview)
+- [Key differences](#key-differences)
+    - [Editing model](#editing-model)
+    - [Who it's for](#who-its-for)
+    - [What's included](#whats-included)
+
+## Overview
+
+Lunagraph is a design canvas built on real React. Every element you edit is already code, no handoff, no separate step to make it real. Right-click a component to go further: edit its code, its settings, or chat with your own AI assistant right inside the canvas, then save straight back to the real file. It's built for design engineers who want design, code, and AI in one place, using whichever AI assistant you already work with.
+
+Figma is the industry-standard design tool. Its new Code Layers feature lets you turn a design layer into interactive, code-backed content connected to your actual codebase on GitHub, either through Figma's own built-in AI agent or a manual code composer. But it's a layer you choose to convert, not the default state of everything on the canvas, most of a Figma file is still Figma's own design format unless you specifically bring code in. Figma is built for broad design and collaboration at scale; Lunagraph is built for people who want every element to already be code, all the time.
+
+## Key differences
+
+### Editing model
+
+**Lunagraph:**
+The canvas is real code the whole time, no handoff needed to make a design real. Bring your own AI assistant, right inside the canvas.
+
+**Figma:**
+Design layers by default. Specific layers can be converted into Code Layers connected to your real codebase on via GitHub, using Figma's own built-in AI agent or a manual code composer.
+
+
+### Who it's for
+
+**Lunagraph:**
+Design engineers who want design, code, and AI together, natively.
+
+**Figma:**
+Design teams who need broad collaboration, plugins, and enterprise-scale workflows.
+
+
+### What's included
+
+**Lunagraph:**
+Since it's real React, you get the whole React ecosystem, any package works, like three.js for 3D or Framer Motion for animation, not just a fixed set of built-in tools. Plus a full code editor, terminal, and GitHub integration, right in the canvas.
+
+**Figma:**
+Code Layers, a built-in AI design agent, Dev Mode, Figma Make, a mature plugin ecosystem, and native motion/shader tools.
