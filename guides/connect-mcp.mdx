@@ -1,0 +1,152 @@
+---
+title: "Connect MCP"
+description: "Add Lunagraph as an MCP server in Claude Code, Codex, Cursor, or any other agent."
+---
+
+Use Lunagraph's MCP to design on the canvas from the coding agent you already use in your terminal or editor.
+
+<Note>
+  The MCP server runs inside the Lunagraph desktop app. Keep the app open while your agent uses it.
+</Note>
+
+### On this page
+
+- [Video walkthrough](#video-walkthrough)
+- [Set up the MCP](#set-up-the-mcp)
+- [Point the agent at your selection](#point-the-agent-at-your-selection)
+
+## Video walkthrough
+
+<iframe
+  src="https://www.youtube.com/embed/FTLtv0HcTCA?start=880&end=948"
+  title="Use MCP, GitHub, and developer handoff"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen
+  style={{ width: "100%", aspectRatio: "16/9", borderRadius: "0.5rem" }}
+/>
+
+This clip is from [Part 3 of the getting started tutorial](/tutorial#part-3-explore-more-workflows), starting at [14:40](https://youtu.be/FTLtv0HcTCA?t=880).
+
+## Set up the MCP
+
+In Lunagraph, click **MCP** in the top bar to open **Connect MCP**. The dialog shows your local server URL and whether the server is ready. You can copy the setup for your agent from there, or use the steps below.
+
+<Tabs>
+  <Tab title="Claude Code">
+    <Steps>
+      <Step title="Add Lunagraph MCP to Claude Code">
+        Run this command in your terminal to register the Lunagraph MCP server:
+
+        ```bash
+        claude mcp add --scope user --transport http lunagraph http://127.0.0.1:21209/mcp
+        ```
+      </Step>
+      <Step title="Verify connection">
+        Run this command and confirm Lunagraph appears as connected:
+
+        ```bash
+        claude mcp list
+        ```
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Codex">
+    <Steps>
+      <Step title="Add Lunagraph MCP to Codex">
+        Run this command in your terminal to register the Lunagraph MCP server:
+
+        ```bash
+        codex mcp add lunagraph --url http://127.0.0.1:21209/mcp
+        ```
+
+        To configure it manually instead, add this to your Codex `config.toml`:
+
+        ```toml
+        [mcp_servers.lunagraph]
+        url = "http://127.0.0.1:21209/mcp"
+        enabled = true
+        ```
+      </Step>
+      <Step title="Verify connection">
+        Run this command and confirm the Lunagraph server appears:
+
+        ```bash
+        codex mcp list
+        ```
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Cursor">
+    <Steps>
+      <Step title="Add Lunagraph MCP to Cursor">
+        Paste this configuration into **Settings > MCP**, or into `~/.cursor/mcp.json`:
+
+        ```json
+        {
+          "mcpServers": {
+            "lunagraph": {
+              "url": "http://127.0.0.1:21209/mcp"
+            }
+          }
+        }
+        ```
+      </Step>
+      <Step title="Verify connection">
+        Open **Cursor Settings > MCP** and confirm the Lunagraph server shows as connected.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Other">
+    <Steps>
+      <Step title="Add Lunagraph MCP to your client">
+        If your client isn't listed, set up Lunagraph manually. The server URL is `http://127.0.0.1:21209/mcp`.
+
+        ```json
+        {
+          "mcpServers": {
+            "lunagraph": {
+              "serverUrl": "http://127.0.0.1:21209/mcp"
+            }
+          }
+        }
+        ```
+
+        If your client doesn't support remote URLs, use the `mcp-remote` bridge. It needs Node.js.
+
+        ```json
+        {
+          "mcpServers": {
+            "lunagraph": {
+              "command": "npx",
+              "args": ["mcp-remote", "http://127.0.0.1:21209/mcp"]
+            }
+          }
+        }
+        ```
+      </Step>
+      <Step title="Verify connection">
+        Confirm the Lunagraph MCP server shows as connected in your client's settings.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Point the agent at your selection
+
+Tell your agent exactly which element you mean by giving it a link to your selection.
+
+<Steps>
+<Step title="Open your agent in the terminal">
+  Start Claude Code or another connected agent while Lunagraph is open.
+</Step>
+
+<Step title="Copy a link to your selection">
+  Select an element on the canvas and press **Shift + Cmd + L** to copy a link to it.
+</Step>
+
+<Step title="Paste the link into your prompt">
+  Paste the link into your message along with what you want to change. The agent uses the MCP to find that element on the canvas.
+</Step>
+</Steps>

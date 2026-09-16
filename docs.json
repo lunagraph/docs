@@ -26,7 +26,13 @@
           {
             "group": "Guides",
             "pages": [
-              "guides/connect-an-agent",
+              {
+                "group": "Connect an agent",
+                "root": "guides/connect-an-agent",
+                "pages": [
+                  "guides/connect-mcp"
+                ]
+              },
               "guides/connect-your-codebase",
               "guides/import-design-system",
               "guides/edit-component",
