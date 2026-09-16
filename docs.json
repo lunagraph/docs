@@ -17,7 +17,7 @@
             "group": "Getting started",
             "pages": [
               "index",
-              "quickstart",
+              "download-alpha",
               "tutorial",
               "install-claude-code",
               "install-chrome-extension"
@@ -26,6 +26,9 @@
           {
             "group": "Guides",
             "pages": [
+              "guides/connect-an-agent",
+              "guides/connect-your-codebase",
+              "guides/import-design-system",
               "guides/edit-component",
               "guides/custom-controls",
               "guides/send-a-prototype-link",
@@ -39,6 +42,12 @@
       }
     ]
   },
+  "redirects": [
+    {
+      "source": "/quickstart",
+      "destination": "/tutorial"
+    }
+  ],
   "logo": {
     "light": "/logo/light.png",
     "dark": "/logo/dark.png"
