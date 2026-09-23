@@ -7,43 +7,63 @@
     "light": "#555555",
     "dark": "#0a0a0a"
   },
+  "background": {
+    "color": {
+      "light": "#ffffff",
+      "dark": "#0a0a0a"
+    }
+  },
+  "appearance": {
+    "default": "light",
+    "strict": true
+  },
+  "fonts": {
+    "heading": {
+      "family": "Larken",
+      "weight": 300,
+      "source": "/fonts/Larken-Variable.woff2",
+      "format": "woff2"
+    }
+  },
+  "styling": {
+    "eyebrows": "section",
+    "codeblocks": "system"
+  },
+  "icons": {
+    "library": "lucide"
+  },
   "favicon": "/favicon.png",
   "navigation": {
-    "tabs": [
+    "groups": [
       {
-        "tab": "Documentation",
-        "groups": [
+        "group": "Getting started",
+        "pages": [
+          "index",
+          "download-alpha",
+          "tutorial",
+          "install-claude-code",
+          "install-chrome-extension"
+        ]
+      },
+      {
+        "group": "Guides",
+        "pages": [
           {
-            "group": "Getting started",
+            "group": "Connect an agent",
+            "root": "guides/connect-an-agent",
             "pages": [
-              "index",
-              "download-alpha",
-              "tutorial",
-              "install-claude-code",
-              "install-chrome-extension"
+              "guides/connect-mcp"
             ]
           },
-          {
-            "group": "Guides",
-            "pages": [
-              {
-                "group": "Connect an agent",
-                "root": "guides/connect-an-agent",
-                "pages": [
-                  "guides/connect-mcp"
-                ]
-              },
-              "guides/connect-your-codebase",
-              "guides/import-design-system",
-              "guides/edit-component",
-              "guides/custom-controls",
-              "guides/send-a-prototype-link",
-              "guides/chrome-extension-snapshot",
-              "guides/bring-in-your-codebase",
-              "guides/concepts",
-              "guides/getting-started"
-            ]
-          }
+          "guides/connect-your-codebase",
+          "guides/import-design-system",
+          "guides/edit-component",
+          "guides/custom-controls",
+          "guides/send-a-prototype-link",
+          "guides/chrome-extension-snapshot",
+          "guides/bring-in-your-codebase",
+          "guides/concepts",
+          "guides/getting-started"
         ]
       }
     ]
@@ -55,8 +75,8 @@
     }
   ],
   "logo": {
-    "light": "/logo/light.png",
-    "dark": "/logo/dark.png"
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
   },
   "navbar": {
     "links": [
@@ -64,7 +84,12 @@
         "label": "Website",
         "href": "https://lunagraph.com"
       }
-    ]
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Download",
+      "href": "https://lunagraph.com/download"
+    }
   },
   "footer": {
     "socials": {
