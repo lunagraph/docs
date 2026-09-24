@@ -3,32 +3,48 @@ title: "Download Alpha"
 description: "Download Lunagraph and the Chrome extension."
 ---
 
-## Lunagraph Desktop App
+{/* LgIcon and LG_ICONS are used inside the snippet; Mintlify only resolves them when the page imports them too. */}
+import { DownloadList, DownloadRow, NextStepTile, LgIcon, LG_ICONS } from "/snippets/download-list.jsx";
 
-<a href="https://releases.lunagraph.com/Lunagraph-0.0.160-arm64.dmg" target="_blank" style={{ color: "currentColor", textDecoration: "underline", textUnderlineOffset: "3px", fontWeight: 500 }}>Download Lunagraph v0.0.160 for macOS Silicon</a>
+## Lunagraph desktop app
 
-<br />
+<DownloadList>
+  <DownloadRow
+    icon="apple"
+    title="macOS · Apple Silicon"
+    version="0.0.160"
+    file=".dmg"
+    href="https://releases.lunagraph.com/Lunagraph-0.0.160-arm64.dmg"
+  />
+  <DownloadRow
+    icon="apple"
+    title="macOS · Intel"
+    version="0.0.160"
+    file=".dmg"
+    href="https://releases.lunagraph.com/Lunagraph-0.0.160-x64.dmg"
+  />
+  <DownloadRow
+    icon="windows"
+    title="Windows"
+    version="0.0.151"
+    file=".exe"
+    href="https://releases.lunagraph.com/Lunagraph-0.0.151-setup.exe"
+  />
+</DownloadList>
 
-<br />
+## Chrome extension
 
-<a href="https://releases.lunagraph.com/Lunagraph-0.0.160-x64.dmg" target="_blank" style={{ color: "currentColor", textDecoration: "underline", textUnderlineOffset: "3px", fontWeight: 500 }}>Download Lunagraph v0.0.160 for macOS Intel</a>
+<DownloadList>
+  <DownloadRow
+    icon="chrome"
+    title="Lunagraph Screen Capture"
+    file="Google Chrome browser extension"
+    href="https://chromewebstore.google.com/detail/lunagraph-screen-capture/cgiplkomakcnfjooijomlkjelhfheebl"
+    action="Add to Chrome"
+    external
+  />
+</DownloadList>
 
-<br />
-
-<br />
-
-<a href="https://releases.lunagraph.com/Lunagraph-0.0.151-setup.exe" target="_blank" style={{ color: "currentColor", textDecoration: "underline", textUnderlineOffset: "3px", fontWeight: 500 }}>Download Lunagraph v0.0.151 for Windows</a>
-
-## Chrome Extension
-
-<a href="https://chromewebstore.google.com/detail/lunagraph-screen-capture/cgiplkomakcnfjooijomlkjelhfheebl" target="_blank" style={{ color: "currentColor", textDecoration: "underline", textUnderlineOffset: "3px", fontWeight: 500 }}>Get the Chrome Extension</a>
-
-# Getting started
-
-<Card
-  title="Getting started tutorial"
-  icon="rocket"
-  href="/tutorial"
->
-  Follow a complete walkthrough of Lunagraph, from the canvas to round-trip editing.
-</Card>
+<NextStepTile title="New to Lunagraph?" href="/tutorial">
+  Follow a complete walkthrough, from the canvas to round-trip editing.
+</NextStepTile>
