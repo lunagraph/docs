@@ -1,6 +1,6 @@
 ---
 title: "Getting started tutorial"
-description: "Follow a complete walkthrough of Lunagraph, from the canvas to round-trip editing."
+description: "Start with a 4:08 end-to-end tutorial, from a snapshot to shipped code with your real components."
 ---
 
 export const seek = (videoId, seconds) => (event) => {
@@ -12,16 +12,35 @@ export const seek = (videoId, seconds) => (event) => {
   frame.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
-Follow this walkthrough for a complete tour of Lunagraph.
+Start with this **4:08 end-to-end tutorial** to design with your real components, from a snapshot to shipped code.
 
-## In this walkthrough
+## Start here: From snapshot to shipped code
+
+<iframe
+  id="lg-yt-end-to-end"
+  src="https://www.youtube.com/embed/CXmBnQd9QOo"
+  title="Design with your real components, from snapshot to shipped code (Lunagraph Tutorial 04)"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen
+  style={{ width: "100%", aspectRatio: "16/9", borderRadius: "0.5rem" }}
+/>
+
+[Watch on YouTube: Design with your real components, from snapshot to shipped code (Lunagraph Tutorial 04)](https://www.youtube.com/watch?v=CXmBnQd9QOo) · 4:08
+
+## Extra videos and detailed walkthroughs
+
+Use these videos when you want a closer look at individual tools and workflows.
+
+### In this walkthrough
 
 1. [Connect your codebase](#part-1-connect-your-codebase)
 2. [Designing with your components](#part-2-designing-with-your-components)
 3. [Learn the canvas](#part-3-learn-the-canvas)
 4. [Explore more workflows](#part-4-explore-more-workflows)
 
-## Part 1: Connect your codebase
+### Part 1: Connect your codebase
 
 <iframe
   id="lg-yt-codebase"
@@ -34,7 +53,7 @@ Follow this walkthrough for a complete tour of Lunagraph.
   style={{ width: "100%", aspectRatio: "16/9", borderRadius: "0.5rem" }}
 />
 
-## Part 2: Designing with your components
+### Part 2: Designing with your components
 
 <iframe
   id="lg-yt-components"
@@ -47,7 +66,7 @@ Follow this walkthrough for a complete tour of Lunagraph.
   style={{ width: "100%", aspectRatio: "16/9", borderRadius: "0.5rem" }}
 />
 
-## Part 3: Learn the canvas
+### Part 3: Learn the canvas
 
 <iframe
   id="lg-yt-canvas"
@@ -60,7 +79,7 @@ Follow this walkthrough for a complete tour of Lunagraph.
   style={{ width: "100%", aspectRatio: "16/9", borderRadius: "0.5rem" }}
 />
 
-## Part 4: Explore more workflows
+### Part 4: Explore more workflows
 
 <iframe
   id="lg-yt-workflows"
@@ -73,7 +92,7 @@ Follow this walkthrough for a complete tour of Lunagraph.
   style={{ width: "100%", aspectRatio: "16/9", borderRadius: "0.5rem" }}
 />
 
-### Chapters
+#### Chapters
 
 - <a href="https://youtu.be/FTLtv0HcTCA?t=445" onClick={seek("lg-yt-workflows", 445)}>**7:25**</a> Pull real screens from your codebase
 - <a href="https://youtu.be/FTLtv0HcTCA?t=491" onClick={seek("lg-yt-workflows", 491)}>**8:11**</a> Capture live UI with the Chrome extension
@@ -85,13 +104,13 @@ Follow this walkthrough for a complete tour of Lunagraph.
 - <a href="https://youtu.be/FTLtv0HcTCA?t=948" onClick={seek("lg-yt-workflows", 948)}>**15:48**</a> Preview localhost on the canvas
 - <a href="https://youtu.be/FTLtv0HcTCA?t=998" onClick={seek("lg-yt-workflows", 998)}>**16:38**</a> Wrap up
 
-## Pull real screens from your codebase
+### Pull real screens from your codebase
 
 <a href="https://youtu.be/FTLtv0HcTCA?t=445" onClick={seek("lg-yt-workflows", 445)}>Watch from 7:25</a>
 
 Connect local codebases to the chat, then ask the AI to bring existing UI onto the canvas. This helps you compare real product patterns, find inconsistencies, and reuse existing work while you design.
 
-## Capture live UI with the Chrome extension
+### Capture live UI with the Chrome extension
 
 <a href="https://youtu.be/FTLtv0HcTCA?t=491" onClick={seek("lg-yt-workflows", 491)}>Watch from 8:11</a>
 
@@ -99,7 +118,7 @@ Use the Chrome extension to capture an existing page and paste it onto the canva
 
 Learn more in [Capture a webpage with the Chrome extension](/guides/chrome-extension-snapshot).
 
-## Build components developers can use
+### Build components developers can use
 
 <a href="https://youtu.be/FTLtv0HcTCA?t=541" onClick={seek("lg-yt-workflows", 541)}>Watch from 9:01</a>
 
@@ -107,7 +126,7 @@ Design components around the data structure your product needs. Ask developers f
 
 You can test those states through the properties panel while developers receive a component with the interface they need.
 
-## Tune components with custom controls
+### Tune components with custom controls
 
 <a href="https://youtu.be/FTLtv0HcTCA?t=666" onClick={seek("lg-yt-workflows", 666)}>Watch from 11:06</a>
 
@@ -115,7 +134,7 @@ Expose props for creative values such as blur, noise, bleed, animation timing, a
 
 Learn more in [Custom controls](/guides/custom-controls).
 
-## Edit a component and save it back
+### Edit a component and save it back
 
 <a href="https://youtu.be/FTLtv0HcTCA?t=735" onClick={seek("lg-yt-workflows", 735)}>Watch from 12:15</a>
 
@@ -123,7 +142,7 @@ Right-click a component and choose **Edit component** to open its internal layer
 
 Use **Save with instructions** when the change needs additional logic or context from the AI. Learn more in [Edit a component](/guides/edit-component).
 
-## Build and share clickable prototypes
+### Build and share clickable prototypes
 
 <a href="https://youtu.be/FTLtv0HcTCA?t=822" onClick={seek("lg-yt-workflows", 822)}>Watch from 13:42</a>
 
@@ -131,7 +150,7 @@ Ask the chat to connect your screens into an interactive prototype. Because the 
 
 Create a share link when you are ready for feedback. Learn more in [Send a prototype link](/guides/send-a-prototype-link).
 
-## Use MCP, GitHub, and developer handoff
+### Use MCP, GitHub, and developer handoff
 
 <a href="https://youtu.be/FTLtv0HcTCA?t=880" onClick={seek("lg-yt-workflows", 880)}>Watch from 14:40</a>
 
@@ -139,7 +158,7 @@ Use Lunagraph's MCP with coding agents outside the built-in chat. You can also c
 
 Developers can open a shared design, select an element, and copy its code. They can also ask a connected coding agent to retrieve a specific page or component from a Lunagraph project.
 
-## Preview localhost on the canvas
+### Preview localhost on the canvas
 
 <a href="https://youtu.be/FTLtv0HcTCA?t=948" onClick={seek("lg-yt-workflows", 948)}>Watch from 15:48</a>
 
@@ -147,7 +166,7 @@ Insert a live preview of your local application onto the canvas. Compare several
 
 This completes the round-trip editing workflow: design with code, implement in your codebase, and review the live result on the canvas.
 
-## Wrap up
+### Wrap up
 
 <a href="https://youtu.be/FTLtv0HcTCA?t=998" onClick={seek("lg-yt-workflows", 998)}>Watch from 16:38</a>
 
