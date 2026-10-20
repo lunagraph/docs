@@ -1,1 +1,41 @@
+---
+title: "Lunagraph vs Paper"
+description: "Bring a live webpage into Lunagraph as editable elements."
+---
 
+Edit the real code, not just copy it out
+
+### On this page
+
+- [Overview](#overview)
+- [Key differences](#key-differences)
+    -  [Editing model](#editing-model)
+    -  [Who it's for](#who-its-for)
+    -  [What's included](#whats-included)
+
+## Overview
+
+Lunagraph is a design canvas built on real React. Every layer is editable directly, just click it and change it. Components are real React components, not Lunagraph's own stand-in representation. Right-click one to edit its code, its settings, or chat with your own coding agent, right inside the canvas, the same idea as tools like Conductor or Zed, a clean interface that talks to Claude Code running in your terminal behind the scenes, then save straight back to the real file. It's built for design engineers who want full control across design, code, and AI in one place.
+
+Paper also generates real HTML/CSS as you design, and you can edit elements visually the normal way, moving them, restyling them, adjusting them like any design tool. If you want to edit that code yourself by hand, though, it's copy-only. Right-click an element and you can copy it as React CSS, Tailwind, or PNG, but there's no built-in editor to open and type into. Your own AI assistant is a different story: connect one through MCP, like Cursor or Claude Code, and it can read and write to the canvas directly, creating and editing elements in real time, even though the chat itself lives in your coding tool, not inside Paper.
+
+Paper is built for designers working visually. Lunagraph is built for people who want to work in design and code, both in the same place.
+
+## Key differences
+
+### Editing model
+
+**Lunagraph:**
+Elements are live code on the canvas, no prompt needed. Right-click a component to edit its code or chat with your own AI assistant right inside the canvas, like Conductor or Zed, talking to Claude Code running in your terminal behind the scenes.
+
+**Paper:**
+Elements are editable visually, but the code is copy-only. Connect your own AI assistant through MCP, but there's no chat built into Paper's canvas, it lives in your coding tool instead.
+
+
+### Who it’s for
+
+**Lunagraph:**
+Design engineers who want full control across design, code, and AI.
+
+**Paper:**
+Designers who want real, code-accurate output, with AI support through their coding tools.
