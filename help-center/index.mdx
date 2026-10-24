@@ -1,0 +1,60 @@
+---
+title: "Help Center"
+description: "Find answers about your Lunagraph plan, billing, and getting started."
+mode: custom
+---
+
+{/* Adapted from mintlify/help-center-starter/index.mdx. */}
+<div id="lunagraph-help-center" className="mx-auto flex w-full max-w-5xl flex-col gap-14 px-4 py-12 lg:py-16">
+  <div className="flex flex-col items-center gap-12">
+    <div className="flex w-full max-w-lg flex-col gap-1">
+      <h1 className="text-center text-4xl tracking-tight">
+        How can we help?
+      </h1>
+      <p className="text-center text-balance text-base text-gray-600 mt-2">
+        Find answers about your Lunagraph plan, billing, and getting started.
+      </p>
+    </div>
+    <div className="flex w-full max-w-lg flex-col gap-4">
+      <button
+        type="button"
+        data-help-search-trigger
+        aria-label="Search help articles"
+        aria-haspopup="dialog"
+        className="flex h-11 w-full cursor-pointer items-center gap-2 rounded-full bg-gray-50 px-4 text-left text-sm text-gray-500 ring-1 ring-gray-100 hover:ring-gray-200"
+      >
+        <Icon icon="search" size={16} />
+        <span>Search for articles</span>
+      </button>
+    </div>
+  </div>
+
+  <div className="flex flex-col gap-4">
+    <h2 className="text-base font-medium">Browse help</h2>
+    <Columns cols={3}>
+      <Card horizontal icon="credit-card" title="Account & billing" href="/help-center/account-billing">
+        Free and paid plans, upgrades, cancellation, and invoices.
+      </Card>
+      <Card horizontal icon="rocket" title="Getting started" href="/tutorial">
+        Follow the four-part tutorial, from your codebase to the canvas.
+      </Card>
+      <Card horizontal icon="life-buoy" title="Contact support" href="/help-center/contact-support">
+        Get help with your account or a billing question.
+      </Card>
+    </Columns>
+  </div>
+
+  ---
+
+  <div className="flex flex-col gap-4">
+    <h2 className="text-base font-medium">Before you upgrade</h2>
+    <Columns cols={2}>
+      <Card icon="credit-card" title="What changes on a paid plan?" href="/help-center/account-billing/plans" cta="Read article">
+        Understand which billing controls appear on Free and paid plans.
+      </Card>
+      <Card icon="calendar" title="How does cancellation work?" href="/help-center/account-billing/cancel" cta="Read article">
+        Learn how to move to Free at the end of your paid period.
+      </Card>
+    </Columns>
+  </div>
+</div>

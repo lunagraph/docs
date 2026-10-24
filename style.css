@@ -593,3 +593,26 @@ body {
   color: var(--lg-ink);
   transform: translateX(2px);
 }
+
+/* Help Center: retain the starter's centered hero, search, and category cards.
+   Scope branding to this custom page so existing docs keep their layout. */
+#lunagraph-help-center h1 {
+  font-family: var(--lg-serif);
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 200;
+  line-height: 1.1;
+  color: var(--lg-ink);
+}
+
+#content-area #lunagraph-help-center h2 {
+  font-family: var(--lg-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+#lunagraph-help-center [data-help-search-trigger]:focus-visible {
+  outline: 2px solid var(--lg-ink-45);
+  outline-offset: 3px;
+}

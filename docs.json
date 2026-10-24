@@ -65,6 +65,27 @@
           "guides/concepts",
           "guides/getting-started"
         ]
+      },
+      {
+        "group": "Help Center",
+        "icon": "life-buoy",
+        "root": "help-center/index",
+        "pages": [
+          {
+            "group": "Account & billing",
+            "icon": "credit-card",
+            "root": "help-center/account-billing/index",
+            "directory": "card",
+            "expanded": true,
+            "pages": [
+              "help-center/account-billing/plans",
+              "help-center/account-billing/upgrade",
+              "help-center/account-billing/cancel",
+              "help-center/account-billing/invoices-payment"
+            ]
+          },
+          "help-center/contact-support"
+        ]
       }
     ]
   },
@@ -80,6 +101,10 @@
   },
   "navbar": {
     "links": [
+      {
+        "label": "Help Center",
+        "href": "/help-center"
+      },
       {
         "label": "Website",
         "href": "https://lunagraph.com"
